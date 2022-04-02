@@ -6,8 +6,23 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>    
-    <link rel="stylesheet" href="css/main.css">
     <title>Kosbie Clicker</title>
+    <style>
+.store-img {
+    max-width: 100%;
+}
+
+#bg {
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.text-shadow {
+    text-shadow: 0 0 1rem #000;
+}
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -15,49 +30,28 @@
             <div id="bg" class="col-8">
                 <div class="d-flex flex-column vh-100 justify-content-center">
                     <div class="align-self-center d-flex flex-column">
+                        <!-- Insert me dynamically!! -->
                         <div class="align-self-center cookie-info text-center">
                             <h1 class="text-light text-shadow">
                                 <span id="lec-hall">Kian's Lecture Hall</span>
-                                <a href="#" id="edit-lec-hall" data-bs-toggle="modal" data-bs-target="#modalWhatever"><i class="fa-solid fa-pen fa-2xs"></i></a>
+                                <a href="#" id="edit-lec-hall" data-bs-toggle="modal" data-bs-target="#modalWhatever" onclick="rename()"><i class="fa-solid fa-pen fa-2xs"></i></a>
                             </h1>
                             <h2 class="text-light text-shadow">
-                                <span id="kosbies">15112</span> kosbies
+                                <span id="kosbies">0</span> kosbies
                             </h2>
                             <h6 class="text-light text-shadow">
-                                kosbies per second: <span id="kps">42</span>    
+                                kosbies per second: <span id="kps">0</span>    
                             </h6>
                         </div>
-                        <img src="img/koz-cookie.png">
+                        <div class="d-flex text-center align-items-start justify-content-center" style="height: 512px;">
+                            <img class="align-self-center" src="koz-cookie.png" id="koz" onclick="clickKoz()">
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-4 bg-light">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="https://i.natgeofe.com/n/de94c416-6d23-45f5-9708-e8d56289268e/naturepl_01132178.jpg?w=636&h=631" class="store-img">
-                            </div>
-                            <div class="col">
-                                <h5 class="mb-1">Axolotl town</h5>
-                                <p class="mb-1">Cool description :)</p>
-                                <small>$999</small>    
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="https://i.natgeofe.com/n/de94c416-6d23-45f5-9708-e8d56289268e/naturepl_01132178.jpg?w=636&h=631" class="store-img">
-                            </div>
-                            <div class="col">
-                                <h5 class="mb-1">Axolotl town</h5>
-                                <p class="mb-1">Cool description :)</p>
-                                <small>$999</small>    
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                <div class="list-group" id="purchases">
+                    <a id="axlDiv" href="#" class="list-group-item list-group-item-action">
                         <div class="row">
                             <div class="col-4">
                                 <img src="https://i.natgeofe.com/n/de94c416-6d23-45f5-9708-e8d56289268e/naturepl_01132178.jpg?w=636&h=631" class="store-img">
@@ -73,6 +67,6 @@
             </div>
         </div>
     </div>
-    <script src="js/main.js" type="module"></script>
+    <script src="main.js"></script>
 </body>
 </html>
