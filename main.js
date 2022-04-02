@@ -119,11 +119,11 @@ class Purchase {
 
 // Initialize the purchase objects and put in an array
 var purchaseArr = [];
-purchaseArr.push(new Purchase("name1", "https://www.cs.cmu.edu/~112/staff-photos/yizes.jpg", 10, 1));
-purchaseArr.push(new Purchase("name2", "https://i.pinimg.com/originals/7f/77/c3/7f77c3fd38277c083977522b6ce532e0.jpg", 100, 10));
-purchaseArr.push(new Purchase("name3", "https://www.kosbie.net/cmu/fall-20/15-112/notes/hw11-teddyFractal.png", 1000, 100));
-purchaseArr.push(new Purchase("name4", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/All_5_free_tetrominoes.svg/640px-All_5_free_tetrominoes.svg.png", 10000, 1000));
-purchaseArr.push(new Purchase("name5", "https://media.istockphoto.com/vectors/splashes-of-red-tomatoes-on-the-wall-vector-id480491853?k=20&m=480491853&s=612x612&w=0&h=ZrGFvQ38KcVsvxFka2SQW0vEipVgNqOFwf21PTOz0v0=", 10000, 1000));
+purchaseArr.push(new Purchase("TA", "https://www.cs.cmu.edu/~112/staff-photos/yizes.jpg", 10, 1));
+purchaseArr.push(new Purchase("Axolotl", "https://i.pinimg.com/originals/7f/77/c3/7f77c3fd38277c083977522b6ce532e0.jpg", 100, 10));
+purchaseArr.push(new Purchase("Freddy", "https://www.kosbie.net/cmu/fall-20/15-112/notes/hw11-teddyFractal.png", 1000, 100));
+purchaseArr.push(new Purchase("Tetronimo", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/All_5_free_tetrominoes.svg/640px-All_5_free_tetrominoes.svg.png", 10000, 1000));
+purchaseArr.push(new Purchase("Tomato", "https://media.istockphoto.com/vectors/splashes-of-red-tomatoes-on-the-wall-vector-id480491853?k=20&m=480491853&s=612x612&w=0&h=ZrGFvQ38KcVsvxFka2SQW0vEipVgNqOFwf21PTOz0v0=", 10000, 1000));
 
 function tick() {
     kosbies += rate;
