@@ -33,7 +33,7 @@ var purchases = document.getElementById("purchases");
 
 function updateStats() {
     kozRate.innerHTML = rate;
-    kozCount.innerHTML = kosbies;
+    kozCount.innerHTML = Math.floor(kosbies);
 }
 
 function rename() {
@@ -46,7 +46,7 @@ function clickKoz() {
 
     // Add one to the count
     kosbies += 1;
-    kozCount.innerHTML = kosbies;
+    updateStats();
 
     // Shrink the face, then unshrink it 0.05 sec later
     kozImage.style.width = "95%";
@@ -126,8 +126,8 @@ purchaseArr.push(new Purchase("Tetronimo", "https://upload.wikimedia.org/wikiped
 purchaseArr.push(new Purchase("Tomato", "https://media.istockphoto.com/vectors/splashes-of-red-tomatoes-on-the-wall-vector-id480491853?k=20&m=480491853&s=612x612&w=0&h=ZrGFvQ38KcVsvxFka2SQW0vEipVgNqOFwf21PTOz0v0=", 10000, 1000));
 
 function tick() {
-    kosbies += rate;
+    kosbies += rate / 10.0;
     updateStats();
 }
 
-setInterval(tick, 1000);
+setInterval(tick, 100);
